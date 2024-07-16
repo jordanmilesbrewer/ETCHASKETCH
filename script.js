@@ -1,5 +1,5 @@
 let resetBtn = document.querySelector(".reset-btn");
-let randomBtn = document.querySelector(".random-color");
+
 function populateBoard(size) {
   let board = document.querySelector(".board");
   let squares = board.querySelectorAll("div");
@@ -12,13 +12,13 @@ function populateBoard(size) {
   for (let i = 0; i < amount; i++) {
     let square = document.createElement("div");
     square.style.backgroundColor = "white";
-
     square.addEventListener("mouseover", () => {
       square.style.backgroundColor = "black";
     });
     board.insertAdjacentElement("beforeend", square);
   }
 }
+
 populateBoard(16);
 
 function changeSize(input) {
@@ -34,13 +34,3 @@ resetBtn.addEventListener("click", function () {
   let squares = board.querySelectorAll("div");
   squares.forEach((div) => (div.style.backgroundColor = "white"));
 });
-
-//   for (let i = 0; i < amount; i++) {
-//     let square = document.createElement("div");
-//     square.style.backgroundColor = "white";
-//     square.addEventListener("mouseover", () => {
-//       square.style.backgroundColor = "black";
-//     });
-//     board.insertAdjacentElement("beforeend", square);
-//   }
-// }
